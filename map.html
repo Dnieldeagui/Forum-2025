@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa Sonoro do Brasil</title>
+  <link rel="stylesheet" href="mapstyle.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+</head>
+<body>
+  <header>
+    <h1>Mapa Sonoro do Brasil</h1>
+    <button id="theme-toggle">🌙 Modo Escuro</button>
+  </header>
+
+  <main>
+    <div id="map"></div>
+    <aside id="info">
+      <h2>Selecione um local</h2>
+      
+      <div class="info-item">
+        <strong>Nível de Decibéis:</strong> 
+        <span id="decibeis">--</span>
+        <div id="noise-bar-container">
+            <div id="noise-bar"></div>
+        </div>
+      </div>
+      
+      <div class="info-item">
+        <strong>Última atualização:</strong> 
+        <span id="atualizacao">--</span>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Menu inferior para mobile -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button id="mobile-map-btn" class="active">
+      <span>🗺️</span>
+      <span>Mapa</span>
+    </button>
+    <button id="mobile-info-btn">
+      <span>ℹ️</span>
+      <span>Info</span>
+    </button>
+  </div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="mapsource.js"></script>
+</body>
+</html>
